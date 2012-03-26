@@ -19,7 +19,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := holiday
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 # Wifi Specific Defines
-WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/firmware/fw_bcm4330.bin nvram_path=/proc/calibration iface_name=wlan"
+WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/firmware/fw_bcm4330.bin nvram_path=/proc/calibration iface_name=eth0"
 
 # TARGET_HARDWARE_3D := true
 
@@ -28,15 +28,17 @@ TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
 # BOARD_CAMERA_USE_GETBUFFERINFO := true
 
 BOARD_USE_NEW_LIBRIL_HTC := true
+TARGET_PROVIDES_LIBRIL := vendor/htc/holiday/proprietary/libril.so
 
 # BOARD_HAVE_SQN_WIMAX := true
 
-BOARD_KERNEL_CMDLINE := no_console_suspend=1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=holiday no_console_suspend=1
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_PAGE_SIZE := 2048
 
 # Define Prebuilt kernel locations
 TARGET_PREBUILT_KERNEL := device/htc/holiday/prebuilt/root/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/holiday/prebuilt/root/recoverykernel
 
 # cat /proc/emmc
 # dev:        size     erasesize name
