@@ -16,6 +16,8 @@ on early-fs
     mount ext4 /dev/block/mmcblk0p35 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
     mount ext4 /dev/block/mmcblk0p30 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
 
+    devwait /dev/block/mmcblk0p17
+
 on init
     rm /vendor
     mkdir /vendor 0771 system system
@@ -51,7 +53,7 @@ on init
     chown root root /devlog
     chmod 0700 /devlog
 
-	mount rootfs rootfs / remount
+    mount rootfs rootfs / remount
 
     #for CIQ ipc
     mkdir /app-cache/ciq 0711 root system
