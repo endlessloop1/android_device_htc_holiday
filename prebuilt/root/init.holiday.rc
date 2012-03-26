@@ -206,7 +206,7 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci \
     group bluetooth net_bt_admin
     disabled
 
-service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p26 /dev/block/mmcblk0p27 /dev/block/mmcblk0p19
+service rmt_storage /system/bin/rmt_storage emmc@modem_st1 emmc@modem_st2 NULL NULL emmc@mdm_efs1 emmc@mdm_efs2 emmc@mdm9k_config
     user root
     disabled
 
