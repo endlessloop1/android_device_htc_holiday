@@ -32,7 +32,7 @@ TARGET_PROVIDES_LIBRIL := vendor/htc/holiday/proprietary/lib/libril.so
 
 # BOARD_HAVE_SQN_WIMAX := true
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=holiday no_console_suspend=1
+BOARD_KERNEL_CMDLINE := no_console_suspend=1
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_PAGE_SIZE := 2048
 
