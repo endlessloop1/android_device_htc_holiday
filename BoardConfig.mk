@@ -64,4 +64,4 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
-# BOARD_CUSTOM_GRAPHICS:= ../../../device/htc/holiday/graphics.c
+BOARD_CUSTOM_GRAPHICS:= ../../../device/htc/holiday/graphics.c

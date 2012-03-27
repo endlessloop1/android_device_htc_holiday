@@ -227,12 +227,6 @@ on property:sys.radio.shutdown=true
 on property:ro.emmc=1
     start rmt_storage
 
-service sequansd /system/bin/sequansd /etc/wimax/sequansd/sequansd_app.xml
-    user root
-    group root inet
-    socket sequansd_0 dgram 660 root root
-    disabled
-
 service modem /system/bin/wireless_modem
     user system
     group system radio
