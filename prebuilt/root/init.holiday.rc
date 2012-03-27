@@ -158,10 +158,6 @@ on boot
     write /sys/block/mmcblk0/bdi/read_ahead_kb 1024
     write /sys/block/mmcblk1/bdi/read_ahead_kb 1024
 
-service post-boot /system/bin/sh /system/etc/init.post_boot.sh
-    user root
-    oneshot
-
 # Force loading of modem and Q6 images
 service load-modem /system/bin/load-modem.sh
     oneshot
