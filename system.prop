@@ -44,8 +44,6 @@ persist.rild.ril.ltedrtable=max_retries=infinite,10000
 ro.use_data_netmgrd=true
 persist.data_netmgrd_nint=11
 
-net.tcp.buffersize.wimax = 4096,221184,524288,4096,16384,110208
-
 # holiday RF team request
 ro.ril.enable.dtm = 0
 ro.ril.gprsclass = 12
