@@ -92,4 +92,3 @@ ro.emmc = 1
 
 persist.service.adb.enable=1
 persist.sys.root_access=3
-
