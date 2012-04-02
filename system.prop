@@ -25,6 +25,9 @@ debug.fb.rgb565 = 0
 com.qc.hardware=true
 com.qc.hdmi_out=false
 
+#Playground Panel
+ro.config.play.bootsound=0
+
 #+HTC_RIL: from QCT Fusion
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
