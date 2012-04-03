@@ -5,7 +5,7 @@
 com.qc.hardware=true
 debug.enabletr=false
 com.qc.hdmi_out=false
-ro.sf.compbypass.enable=1
+ro.sf.compbypass.enable=0
 debug.composition.type=gpu
 dev.pm.dyn_samplingrate=1
 debug.qctwa.statusbar = 1
@@ -90,5 +90,4 @@ ro.phone_storage = 0
 # Make rmt_storage start at init
 ro.emmc = 1
 
-persist.service.adb.enable=1
 persist.sys.root_access=3
