@@ -72,10 +72,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
 
-# Temporary hack
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.service.adb.enable=1
-
 #Using prebuilt audio libs since we have audio/mic with them
 PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/lib/hw/audio.primary.default.so:system/lib/hw/audio.primary.default.so \

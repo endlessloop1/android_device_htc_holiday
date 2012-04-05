@@ -84,5 +84,8 @@ mobiledata.interfaces=rmnet0,eth0,gprs,ppp0
 # For emmc phone storage
 ro.phone_storage = 0
 
+# For adb on bootup
+persist.service.adb.enable=1
+
 # Make rmt_storage start at init
 ro.emmc = 1
