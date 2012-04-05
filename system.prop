@@ -57,7 +57,7 @@ ro.telephony.default_network=0
 
 ro.config.lte=true
 
-wifi.interface=eth0
+wifi.interface=wlan0
 wifi.supplicant_scan_interval=30
 
 # The OpenGL ES API level that is natively supported by this device.
