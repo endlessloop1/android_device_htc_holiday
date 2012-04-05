@@ -3,10 +3,10 @@
 
 # Qualcomm Display
 com.qc.hardware=true
-debug.enabletr=false
+#debug.enabletr=false
 com.qc.hdmi_out=false
-ro.sf.compbypass.enable=1
-debug.composition.type=gpu
+#ro.sf.compbypass.enable=1
+debug.composition.type=c2d
 dev.pm.dyn_samplingrate=1
 debug.qctwa.statusbar = 1
 debug.qctwa.preservebuf = 1
