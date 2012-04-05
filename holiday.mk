@@ -211,8 +211,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_LOCALES += en
 
 PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/system/etc/vold.fstab:system/etc/vold.fstab \
-    device/htc/holiday/prebuilt/system/etc/apns-conf.xml:system/etc/apns-conf.xml
+    device/htc/holiday/prebuilt/system/etc/vold.fstab:system/etc/vold.fstab
+#    device/htc/holiday/prebuilt/system/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
