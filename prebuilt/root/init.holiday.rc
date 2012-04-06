@@ -175,7 +175,7 @@ service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     oneshot
     keycodes 114 115
 
-#service hciattach /system/bin/brcm_patchram_plus --enable_hci --patchram /system/vendor/firmware/bcm4330.hcd /dev/ttyHS0
+#service hciattach /system/bin/brcm_patchram_plus --enable_hci --patchram /system/etc/firmware/bcm4330.hcd /dev/ttyHS0
 #    user bluetooth
 #    group bluetooth net_bt_admin
 #    disabled
