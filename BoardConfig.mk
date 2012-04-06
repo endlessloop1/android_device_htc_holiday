@@ -32,10 +32,10 @@ BOARD_WLAN_DEVICE := bcmdhd
 
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcmdhd.ko"
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_STA     := "/system/vendor/firmware/fw_bcm4330.bin"
-WIFI_DRIVER_FW_PATH_AP      := "/system/vendor/firmware/fw_bcm4330_apsta.bin"
+WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcm4330.bin"
+WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/fw_bcm4330_apsta.bin"
 WIFI_DRIVER_MODULE_NAME     := "bcmdhd"
-WIFI_DRIVER_MODULE_ARG      := "iface_name=eth0 firmware_path=/system/vendor/firmware/fw_bcm4330.bin
+WIFI_DRIVER_MODULE_ARG      := "iface_name=eth0 firmware_path=/system/etc/firmware/fw_bcm4330.bin nvram_path=/system/etc/wifi/nvram_net.txt"
 
 # Audio 
 #BOARD_USES_GENERIC_AUDIO := false

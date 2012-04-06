@@ -160,9 +160,9 @@ PRODUCT_PACKAGES += \
 
 # Firmware
 PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/system/etc/firmware/bcm4330.hcd:system/vendor/firmware/bcm4330.hcd \
-    device/htc/holiday/prebuilt/system/etc/firmware/fw_bcm4330.bin:system/vendor/firmware/fw_bcm4330.bin \
-    device/htc/holiday/prebuilt/system/etc/firmware/fw_bcm4330_apsta.bin:system/vendor/firmware/fw_bcm4330_apsta.bin \
+    device/htc/holiday/prebuilt/system/etc/firmware/bcm4330.hcd:system/etc/firmware/bcm4330.hcd \
+    device/htc/holiday/prebuilt/system/etc/firmware/fw_bcm4330.bin:system/etc/firmware/fw_bcm4330.bin \
+    device/htc/holiday/prebuilt/system/etc/firmware/fw_bcm4330_apsta.bin:system/etc/firmware/fw_bcm4330_apsta.bin \
     device/htc/holiday/prebuilt/system/etc/firmware/vidc_1080p.fw:system/etc/firmware/vidc_1080p.fw \
     device/htc/holiday/prebuilt/system/etc/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     device/htc/holiday/prebuilt/system/etc/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw
