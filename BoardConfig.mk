@@ -107,7 +107,7 @@ TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/holiday/prebuilt/root/recoverykern
 TARGET_RECOVERY_INITRC := device/htc/holiday/prebuilt/recovery/root/init.rc
 
 # For vold to get SD to mount properly
-BOARD_VOLD_MAX_PARTITIONS := 37
+# BOARD_VOLD_MAX_PARTITIONS := 37
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
