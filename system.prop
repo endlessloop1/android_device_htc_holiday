@@ -51,12 +51,16 @@ ro.ril.gprsclass = 12
 ro.ril.hsdpa.category = 14
 ro.ril.hsupa.category = 6
 ro.ril.hsxpa = 4
+ro.ril.enable.amr.wideband=1
+ro.ril.enable.r8fd=1
+ro.ril.radio.svn=2
+ro.ril.fast.dormancy.rule=1
+ro.ril.disable.mcc.filter=1
+ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
 
 # Default network type.
 # 0 => WCDMA preferred.
-ro.telephony.default_network=0
-
-ro.config.lte=true
+ro.telephony.default_network=9
 
 wifi.interface=eth0
 wifi.supplicant_scan_interval=30
