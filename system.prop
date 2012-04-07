@@ -85,6 +85,9 @@ ro.ril.def.agps.mode = 2
 # For HSDPA low throughput
 ro.ril.disable.power.collapse = 1
 
+# System property for cabl
+ro.qualcomm.cabl=1
+
 mobiledata.interfaces=rmnet0,eth0,gprs,ppp0
 # For emmc phone storage
 ro.phone_storage = 0
