@@ -176,6 +176,8 @@ PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/etc/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
     device/htc/holiday/prebuilt/system/etc/AIC3254_REG_DualMic.txt:system/etc/AIC3254_REG_DualMic.txt \
     device/htc/holiday/prebuilt/system/etc/AIC3254_REG_DualMic_WA.txt:system/etc/AIC3254_REG_DualMic_WA.txt \
+    device/htc/holiday/prebuilt/system/etc/AIC3254_REG_MFG.csv:system/etc/AIC3254_REG_MFG.csv \
+    device/htc/holiday/prebuilt/system/etc/AIC3254_REG_MFG_WA.csv:system/etc/AIC3254_REG_MFG_WA.csv \
     device/htc/holiday/prebuilt/system/etc/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
     device/htc/holiday/prebuilt/system/etc/AudioBTID.csv:system/etc/AudioBTID.csv \
     device/htc/holiday/prebuilt/system/etc/CodecDSPID.txt:system/etc/CodecDSPID.txt \
@@ -187,8 +189,12 @@ PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Original_SPK.txt:system/etc/soundimage/Sound_Original_SPK.txt \
     device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Original.txt:system/etc/soundimage/Sound_Original.txt \
     device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Phone_Original_HP.txt:system/etc/soundimage/Sound_Phone_Original_HP.txt \
+    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Phone_Original_HP_WA.txt:system/etc/soundimage/Sound_Phone_Original_HP_WA.txt \
+    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Phone_Original_WA.txt:system/etc/soundimage/Sound_Phone_Original_WA.txt \
     device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Phone_Original_REC.txt:system/etc/soundimage/Sound_Phone_Original_REC.txt \
+    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Phone_Original_REC_WA.txt:system/etc/soundimage/Sound_Phone_Original_REC_WA.txt \
     device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Phone_Original_SPK.txt:system/etc/soundimage/Sound_Phone_Original_SPK.txt \
+    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Phone_Original_SPK_WA.txt:system/etc/soundimage/Sound_Phone_Original_SPK_WA.txt \
     device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Rec_Landscape.txt:system/etc/soundimage/Sound_Rec_Landscape.txt \
     device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Rec_Portrait.txt:system/etc/soundimage/Sound_Rec_Portrait.txt \
     device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Recording.txt:system/etc/soundimage/Sound_Recording.txt \
