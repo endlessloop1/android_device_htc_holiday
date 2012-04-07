@@ -201,7 +201,6 @@ PRODUCT_COPY_FILES += \
 # Wifi Module
 PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko 
-#    device/htc/holiday/prebuilt/system/lib/modules/sequans_sdio.ko:system/lib/modules/sequans_sdio.ko 
 
 
 # we have enough storage space to hold precise GC data
