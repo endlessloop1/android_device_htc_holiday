@@ -44,7 +44,24 @@
 /dev/msm_vidc_enc       0660    system      audio
 /dev/msm_vidc_reg       0660    system      audio
 
-# Bluetooth
+# Bluetooth and Radio
 /dev/ttyHS0             0600    bluetooth   bluetooth
-/dev/ttyMSM0            0600    bluetooth   bluetooth
-/dev/uinput             0660    system      bluetooth
+/dev/ttyHSUSB0          0600    bluetooth   bluetooth
+/dev/ttySA0             0600    system      system
+/dev/smd0               0640    radio       radio
+/dev/smd7               0640    radio       radio
+/dev/smd9               0600    system      system
+/dev/smdcntl0           0640    radio       radio
+/dev/smdcntl1           0640    radio       radio
+/dev/smdcntl2           0640    radio       radio
+/dev/smdcntl3           0640    radio       radio
+/dev/smdcntl4           0640    radio       radio
+/dev/smdcntl5           0640    radio       radio
+/dev/smdcntl6           0640    radio       radio
+/dev/smdcntl7           0640    radio       radio
+/dev/qmi                0640    radio       radio
+/dev/qmi0               0640    radio       radio
+/dev/qmi1               0640    radio       radio
+/dev/qmi2               0640    radio       radio
+/dev/oncrpc/*           0660    root        qcom_oncrpc
+/dev/rtc0               0600    system      system
