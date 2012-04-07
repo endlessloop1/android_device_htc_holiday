@@ -43,6 +43,14 @@
 /dev/msm_vidc_dec       0660    system      audio
 /dev/msm_vidc_enc       0660    system      audio
 /dev/msm_vidc_reg       0660    system      audio
+/dev/msm_fm             0660    system      audio
+/dev/msm_mvs            0660    system      audio
+/dev/msm_qcelp_in       0660    system      audio
+/dev/msm_evrc_in        0660    system      audio
+/dev/msm_wma            0660    system      audio
+/dev/msm_wmapro         0660    system      audio
+/dev/msm_aac_in         0660    system      audio
+/dev/msm_amrnb_in       0640    system      audio
 
 # Bluetooth and Radio
 /dev/ttyHS0             0600    bluetooth   bluetooth
