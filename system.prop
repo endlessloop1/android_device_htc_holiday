@@ -74,7 +74,7 @@ ro.opengles.version = 131072
 dalvik.vm.heapsize=64m
 
 #Modify MTU from 1500 to 1472 on 3G network
-ro.ril.set.mtu1472 = 1
+#ro.ril.set.mtu1472 = 1
 
 # Make cdma voicemail the default voicemail number.
 #ro.cdma.voicemail.number = mine
