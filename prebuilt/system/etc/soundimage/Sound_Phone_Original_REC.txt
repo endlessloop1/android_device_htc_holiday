@@ -29,7 +29,7 @@ w 30 01 08 # Power Configuration Register
 w 30 02 21 # LDO Control Register
 w 30 47 31 # Analog Input Quick Charging Configuration Register
 w 30 7b 01 # Reference Power-up Configuration Register
-w 30 0a 3b # Common Mode Control Register
+w 30 0a 33 # Common Mode Control Register
 w 30 00 00 # Page Select Register
 w 30 04 03 # Clock Setting Register 1, Multiplexers
 w 30 05 91 # Clock Setting Register 2, PLL P&R Values
@@ -395,13 +395,13 @@ w 30 18 6d # C4 (23:16) ADC Buffer A
 w 30 19 52 # C4 (15:8) ADC Buffer A
 w 30 1a 82 # C4 (7:0) ADC Buffer A
 w 30 1b 00 # C4 Reserved
-w 30 1c 7f # C5 (23:16) ADC Buffer A
-w 30 1d ff # C5 (15:8) ADC Buffer A
-w 30 1e ac # C5 (7:0) ADC Buffer A
+w 30 1c 40 # C5 (23:16) ADC Buffer A
+w 30 1d 00 # C5 (15:8) ADC Buffer A
+w 30 1e 00 # C5 (7:0) ADC Buffer A
 w 30 1f 00 # C5 Reserved
-w 30 20 66 # C6 (23:16) ADC Buffer A
-w 30 21 66 # C6 (15:8) ADC Buffer A
-w 30 22 66 # C6 (7:0) ADC Buffer A
+w 30 20 7f # C6 (23:16) ADC Buffer A
+w 30 21 ff # C6 (15:8) ADC Buffer A
+w 30 22 ff # C6 (7:0) ADC Buffer A
 w 30 23 00 # C6 Reserved
 w 30 24 ff # C7 (23:16) ADC Buffer A
 w 30 25 ff # C7 (15:8) ADC Buffer A
@@ -1213,13 +1213,13 @@ w 30 74 0c # C207 (23:16) ADC Buffer A
 w 30 75 cc # C207 (15:8) ADC Buffer A
 w 30 76 cd # C207 (7:0) ADC Buffer A
 w 30 77 00 # C207 Reserved
-w 30 78 e0 # C208 (23:16) ADC Buffer A
-w 30 79 00 # C208 (15:8) ADC Buffer A
-w 30 7a 00 # C208 (7:0) ADC Buffer A
+w 30 78 cd # C208 (23:16) ADC Buffer A
+w 30 79 01 # C208 (15:8) ADC Buffer A
+w 30 7a 06 # C208 (7:0) ADC Buffer A
 w 30 7b 00 # C208 Reserved
-w 30 7c 20 # C209 (23:16) ADC Buffer A
-w 30 7d 00 # C209 (15:8) ADC Buffer A
-w 30 7e 00 # C209 (7:0) ADC Buffer A
+w 30 7c 14 # C209 (23:16) ADC Buffer A
+w 30 7d 14 # C209 (15:8) ADC Buffer A
+w 30 7e 7b # C209 (7:0) ADC Buffer A
 w 30 7f 00 # C209 Reserved
 w 30 00 0f # Page Select Register
 w 30 08 f8 # C210 (23:16) ADC Buffer A
@@ -4111,7 +4111,7 @@ w 30 55 00 # ADC miniDSP instruction
 w 30 56 00 # ADC miniDSP instruction 
 w 30 57 00 # ADC miniDSP instruction 
 w 30 58 20 # ADC miniDSP instruction 
-w 30 59 05 # ADC miniDSP instruction 
+w 30 59 01 # ADC miniDSP instruction 
 w 30 5a 21 # ADC miniDSP instruction 
 w 30 5b 00 # ADC miniDSP instruction 
 w 30 5c 30 # ADC miniDSP instruction 
@@ -4575,9 +4575,9 @@ w 30 41 03 # ADC miniDSP instruction
 w 30 42 ff # ADC miniDSP instruction 
 w 30 43 00 # ADC miniDSP instruction 
 w 30 00 2c # Page Select Register
-w 30 08 46 # C0 (23:16) DAC Buffer A
-w 30 09 66 # C0 (15:8) DAC Buffer A
-w 30 0a 66 # C0 (7:0) DAC Buffer A
+w 30 08 4c # C0 (23:16) DAC Buffer A
+w 30 09 98 # C0 (15:8) DAC Buffer A
+w 30 0a 5f # C0 (7:0) DAC Buffer A
 w 30 0b 00 # C0 Reserved
 w 30 0c 7f # C1 (23:16) DAC Buffer A
 w 30 0d fc # C1 (15:8) DAC Buffer A
@@ -6406,9 +6406,9 @@ w 30 4c 33 # C197 (23:16) DAC Buffer B
 w 30 4d 33 # C197 (15:8) DAC Buffer B
 w 30 4e 33 # C197 (7:0) DAC Buffer B
 w 30 4f 00 # C197 Reserved
-w 30 50 66 # C198 (23:16) DAC Buffer B
-w 30 51 66 # C198 (15:8) DAC Buffer B
-w 30 52 66 # C198 (7:0) DAC Buffer B
+w 30 50 7e # C198 (23:16) DAC Buffer B
+w 30 51 b8 # C198 (15:8) DAC Buffer B
+w 30 52 52 # C198 (7:0) DAC Buffer B
 w 30 53 00 # C198 Reserved
 w 30 54 33 # C199 (23:16) DAC Buffer B
 w 30 55 33 # C199 (15:8) DAC Buffer B
@@ -6426,13 +6426,13 @@ w 30 60 00 # C202 (23:16) DAC Buffer B
 w 30 61 01 # C202 (15:8) DAC Buffer B
 w 30 62 73 # C202 (7:0) DAC Buffer B
 w 30 63 00 # C202 Reserved
-w 30 64 6c # C203 (23:16) DAC Buffer B
-w 30 65 cc # C203 (15:8) DAC Buffer B
-w 30 66 cd # C203 (7:0) DAC Buffer B
+w 30 64 6e # C203 (23:16) DAC Buffer B
+w 30 65 14 # C203 (15:8) DAC Buffer B
+w 30 66 7a # C203 (7:0) DAC Buffer B
 w 30 67 00 # C203 Reserved
-w 30 68 13 # C204 (23:16) DAC Buffer B
-w 30 69 33 # C204 (15:8) DAC Buffer B
-w 30 6a 33 # C204 (7:0) DAC Buffer B
+w 30 68 11 # C204 (23:16) DAC Buffer B
+w 30 69 eb # C204 (15:8) DAC Buffer B
+w 30 6a 86 # C204 (7:0) DAC Buffer B
 w 30 6b 00 # C204 Reserved
 w 30 6c 40 # C205 (23:16) DAC Buffer B
 w 30 6d 00 # C205 (15:8) DAC Buffer B
