@@ -1,4 +1,4 @@
-Header, HTC_HOY_0727_XA_WA
+Header, HTC_HOY_1230_XA_WA
 
 A00,Initial             
 w 30 00 00
@@ -527,8 +527,8 @@ w 30 34 02
 w 30 36 80
 w 30 37 02
 w 30 39 80
-w 30 3B 48
-w 30 3C 48
+w 30 3B 3C
+w 30 3C 3C
 w 30 00 00
 w 30 51 C0
 w 30 52 00

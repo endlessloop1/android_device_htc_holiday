@@ -672,7 +672,7 @@ w 30 3b 00 # C72 Reserved
 w 30 00 50 # Page Select Register
 w 30 08 30 # ADC miniDSP instruction 
 w 30 09 24 # ADC miniDSP instruction 
-w 30 0a 9d # ADC miniDSP instruction 
+w 30 0a 4e # ADC miniDSP instruction 
 w 30 0b 00 # ADC miniDSP instruction 
 w 30 0c 00 # ADC miniDSP instruction 
 w 30 0d 00 # ADC miniDSP instruction 
