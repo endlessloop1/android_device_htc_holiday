@@ -18,6 +18,9 @@
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+# Inherit msm8660 Vendor Files
+$(call inherit-product-if-exists, vendor/qcom/qcom-vendor-blobs.mk)
+
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/etc/gps.conf:system/etc/gps.conf
