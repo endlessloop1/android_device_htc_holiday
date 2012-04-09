@@ -23,9 +23,9 @@ on early-fs
     mkdir /vendor/firmware/misc 0771 system system
     mkdir /vendor/firmware/adsp 0771 system system
     wait /dev/block/mmcblk0p17
-    wait /dev/block/mmcblk0p19
+    wait /dev/block/mmcblk0p21
     mount vfat /dev/block/mmcblk0p17 /vendor/firmware/misc ro shortname=lower
-    mount vfat /dev/block/mmcblk0p19 /vendor/firmware/adsp ro shortname=lower
+    mount vfat /dev/block/mmcblk0p21 /vendor/firmware/adsp ro shortname=lower
     symlink /vendor/firmware/adsp/q6.b07 /vendor/firmware/q6.b07
     symlink /vendor/firmware/adsp/q6.b06 /vendor/firmware/q6.b06
     symlink /vendor/firmware/adsp/q6.b05 /vendor/firmware/q6.b05
