@@ -1,4 +1,4 @@
-#TPA2051 Pyramid 20110506_XC,,,,,,,,,
+#TPA2051 Shooter 20110506_XC,,,,,,,,,
 #mode/kind/i2c_cmds[7],,,,,,,,,
 #kind = 0:SPKR, kind = 1:HEADSET, kind = 2:Ring kind = 4:OFF,,,,,,,
 0,4,0x00,0x90,0x00,0x00,0x00,0x00,0x00,#TPA2051_MODE_OFF
