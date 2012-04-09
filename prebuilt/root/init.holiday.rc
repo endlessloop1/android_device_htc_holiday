@@ -220,7 +220,7 @@ on property:service.ser2net.enable=1
 on property:service.ser2net.enable=0
     stop srv_ser2net
 
-service rmt_storage /system/bin/rmt_storage emmc@modem_st1 emmc@modem_st2 NULL NULL emmc@mdm_efs1 emmc@mdm_efs2 emmc@mdm9k_config
+service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmcblk0p26 /dev/block/mmcblk0p27 /dev/block/mmcblk0p28 /dev/block/mmcblkp20
     user root
     disabled
 
