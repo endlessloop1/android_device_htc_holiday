@@ -76,10 +76,10 @@ PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
 
 #Using prebuilt audio libs since we have audio/mic with them
-PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/system/lib/hw/audio.primary.default.so:system/lib/hw/audio.primary.default.so \
-    device/htc/holiday/prebuilt/system/lib/hw/audio_policy.default.so:system/lib/hw/audio_policy.default.so \
-    device/htc/holiday/prebuilt/system/lib/hw/audio.a2dp.default.so:system/lib/hw/audio.a2dp.default.so
+#PRODUCT_COPY_FILES += \
+#    device/htc/holiday/prebuilt/system/lib/hw/audio.primary.default.so:system/lib/hw/audio.primary.default.so \
+#    device/htc/holiday/prebuilt/system/lib/hw/audio_policy.default.so:system/lib/hw/audio_policy.default.so \
+#    device/htc/holiday/prebuilt/system/lib/hw/audio.a2dp.default.so:system/lib/hw/audio.a2dp.default.so
 
 
 #Add touchscreen config file
