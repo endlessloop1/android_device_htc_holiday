@@ -162,6 +162,18 @@ on fs
     #write /proc/sys/net/ipv6/conf/rmnet_sdio1/disable_ipv6 1
     #write /proc/sys/net/ipv6/conf/rmnet_sdio2/disable_ipv6 1
 
+# set diag permissions
+    chown radio radio /dev/diag
+    chown radio radio /dev/diag_mdm
+    chown radio radio /dev/htcdiag
+    chown radio radio /dev/diag_arm9
+    chown radio radio /dev/btdiag
+    chmod 0660 /dev/diag
+    chmod 0660 /dev/diag_mdm
+    chmod 0660 /dev/htcdiag
+    chmod 0660 /dev/diag_arm9
+    chmod 0660 /dev/btdiag
+
 
     setprop net.tcp.buffersize.default 4096,87380,110208,4096,16384,110208
     setprop net.tcp.buffersize.wifi    524288,1048576,2097152,262144,524288,1048576
