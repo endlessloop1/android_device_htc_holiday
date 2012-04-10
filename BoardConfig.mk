@@ -39,7 +39,7 @@ WIFI_DRIVER_MODULE_ARG      := "iface_name=eth0 firmware_path=/system/etc/firmwa
 
 # Audio 
 #BOARD_USES_GENERIC_AUDIO := false
-BOARD_PREBUILT_LIBAUDIO := true
+#BOARD_PREBUILT_LIBAUDIO := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
