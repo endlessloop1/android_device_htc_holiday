@@ -167,8 +167,6 @@ PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/etc/firmware/bcm4330.hcd:system/etc/firmware/bcm4330.hcd \
     device/htc/holiday/prebuilt/system/etc/firmware/fw_bcm4330.bin:system/etc/firmware/fw_bcm4330.bin \
     device/htc/holiday/prebuilt/system/etc/firmware/fw_bcm4330_apsta.bin:system/etc/firmware/fw_bcm4330_apsta.bin
-    
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
 
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
