@@ -192,8 +192,8 @@ service load-modem /system/bin/load-modem.sh
 service kickstart /system/bin/qcks l
     oneshot
 
-service wpa_supplicant /system/bin/wpa_supplicant -Dnl80211 -ieth0 \
-        -c/data/misc/wifi/wpa_supplicant.conf -puse_p2p_group_interface=1 -e/data/misc/wifi/entropy.bin
+service wpa_supplicant /system/bin/wpa_supplicant -Dwext -ieth0 \
+        -c/data/misc/wifi/wpa_supplicant.conf
     class main
     socket wpa_eth0 dgram 0660 wifi wifi
     disabled
@@ -235,7 +235,7 @@ service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     oneshot
     keycodes 114 115
 
-service hciattach /system/bin/brcm_patchram_plus --enable_hci --patchram /system/etc/firmware/bcm4330.hcd /dev/ttyHS0
+service hciattach /system/bin/brcm_patchram_plus --enable_hci --patchram /vendor/firmware/bcmdhd.hcd /dev/ttyHS0
     class main
     user bluetooth
     group bluetooth net_bt_admin
