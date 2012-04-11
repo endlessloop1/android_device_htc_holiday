@@ -159,6 +159,7 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVenc \
     libOmxVdec \
+    libI420colorconvert \
     com.android.future.usb.accessory
 
 # Firmware
