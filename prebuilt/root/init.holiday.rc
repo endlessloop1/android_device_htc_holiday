@@ -141,13 +141,13 @@ on fs
     symlink /mnt/sdcard/ext_sd /sdcard2
 
     # Discretix DRM
-    mkdir /data/DxDrm
-    mkdir /data/DxDrm/fuse
-    mkdir /data/DxDrm/Credentials
-    mkdir /data/DxDrm/Credentials/PlayReady
-    chmod 555 /data/DxDrm
-    copy /etc/DxPrdyProvisionObf.pkg /data/DxDrm/Credentials/PlayReady/DxPrdyProvisionObf.pkg
-    copy /etc/DxDrmConfig_Server.txt /data/DxDrm/DxDrmConfig_Server.txt
+#    mkdir /data/DxDrm
+#    mkdir /data/DxDrm/fuse
+#    mkdir /data/DxDrm/Credentials
+#    mkdir /data/DxDrm/Credentials/PlayReady
+#    chmod 555 /data/DxDrm
+#    copy /etc/DxPrdyProvisionObf.pkg /data/DxDrm/Credentials/PlayReady/DxPrdyProvisionObf.pkg
+#    copy /etc/DxDrmConfig_Server.txt /data/DxDrm/DxDrmConfig_Server.txt
 
     # Overwrite framework low memory killer setting
     write /sys/module/lowmemorykiller/parameters/minfree 2048,3072,4096,6144,8192,12288
@@ -252,9 +252,9 @@ service btld /system/bin/logwrapper /system/bin/btld -lpm 1 -hb 3000000
     oneshot
 
 # for USB internet sharing
-service udhcpd /system/bin/udhcpd
-	disabled
-	oneshot
+#service udhcpd /system/bin/udhcpd
+#	disabled
+#	oneshot
 
 service netsharing_on /system/bin/netsharing net on
 	disabled
@@ -359,25 +359,25 @@ service mpld /system/bin/mpld
 service htcbatt /system/bin/htcbatt
     user root
 
-service dcvs0 /system/bin/dcvs --cpu=0 --slacktime=16
-    user root
-    disabled
+#service dcvs0 /system/bin/dcvs --cpu=0 --slacktime=16
+#    user root
+#    disabled
 
-service dcvs1 /system/bin/dcvs --cpu=1 --slacktime=16
-    user root
-    disabled
+#service dcvs1 /system/bin/dcvs --cpu=1 --slacktime=16
+#    user root
+#    disabled
 
 service mpdecision /system/bin/mpdecision --Nw 5.4 --Ts 350 --no_sleep --avg_comp --single_core_while_panel_off
     user root
     disabled
 
-service thermald /system/bin/thermald
-    user root
-    disabled
+#service thermald /system/bin/thermald
+#    user root
+#    disabled
 
 on property:init.svc.bootanim=stopped
-    start thermald
     start mpdecision
+#    start thermald
 
 service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
     user root
@@ -392,7 +392,7 @@ service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
     ioprio idle 0
 
 # Discretix DRM
-service dx_drm_server /system/bin/DxDrmServerIpc -f -o allow_other /data/DxDrm/fuse
+#service dx_drm_server /system/bin/DxDrmServerIpc -f -o allow_other /data/DxDrm/fuse
 
 #on property:ro.build.tags=test-keys
 #    start htc_ebdlogd
