@@ -187,9 +187,11 @@ on fs
 
 # Force loading of modem and Q6 images
 service load-modem /system/bin/load-modem.sh
+    class main
     oneshot
 
 service kickstart /system/bin/qcks l
+    class main
     oneshot
 
 service wpa_supplicant /system/bin/wpa_supplicant -Dwext -iwlan0 \
@@ -245,11 +247,11 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --patchram /system
 # Set target address to emulator host loopback IF
 # Limit baudrate to 460800 to ensure reliable uart operation
 #service btld /system/bin/logwrapper /system/bin/btld -hwtun 10.0.2.2 -hb 460800 3000000 -lpm 1
-service btld /system/bin/logwrapper /system/bin/btld -lpm 1 -hb 3000000
-    user root
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
+#service btld /system/bin/logwrapper /system/bin/btld -lpm 1 -hb 3000000
+#    user root
+#    group bluetooth net_bt_admin
+#    disabled
+#    oneshot
 
 # for USB internet sharing
 #service udhcpd /system/bin/udhcpd
@@ -268,14 +270,15 @@ service netsharing_pass /system/bin/netsharing net_pass on
 	disabled
 	oneshot
 
-service srv_ser2net /system/bin/ser2net -n
-    disabled
+#service srv_ser2net /system/bin/ser2net -n
+#    class main
+#    disabled
 
-on property:service.ser2net.enable=1
-    start srv_ser2net
+#on property:service.ser2net.enable=1
+#    start srv_ser2net
 
-on property:service.ser2net.enable=0
-    stop srv_ser2net
+#on property:service.ser2net.enable=0
+#    stop srv_ser2net
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmcblk0p26 NULL NULL /dev/block/mmcblk0p27 /dev/block/mmcblk0p28 /dev/block/mmcblkp20
     user root
@@ -284,13 +287,14 @@ service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmc
 on property:ro.emmc=1
     start rmt_storage
 
-service dmagent /system/bin/dmagent -N
-    socket dmagent stream 660 root radio
-    user root
-    group radio cache inet misc
+#service dmagent /system/bin/dmagent -N
+#    socket dmagent stream 660 root radio
+#    user root
+#    group radio cache inet misc
 
 # for modem link
 service modem /system/xbin/wireless_modem
+    class main
     user system
     group system radio
     disabled
@@ -304,23 +308,30 @@ on property:service.modem.enable=0
 	stop modem
 
 service zchgd_offmode /system/bin/zchgd -pseudooffmode
+    class main
     user root
     disabled
 
 service zchgd_onmode /system/bin/zchgd -onmode
+    class main
     user root
     oneshot
 
 #+HTC_RIL: from QCT Fusion
 service qmuxd /system/bin/qmuxd
+    class main
+    user radio
+    group system radio inet
 
 service netmgrd /system/bin/netmgrd
+    class main
 
 on property:ro.use_data_netmgrd=false
     # netmgr not supported on specific target
     stop netmgrd
 
 service ril-daemon /system/bin/rild
+    class main
     socket rild stream 660 root radio
     socket rild-debug stream 660 radio system
     user root
@@ -329,9 +340,9 @@ service ril-daemon /system/bin/rild
 #-HTC_RIL: from QCT Fusion
 
 # HTC IPC server
-service htcipcd /system/bin/htcipcd
-    user root
-    group root system
+#service htcipcd /system/bin/htcipcd
+#    user root
+#    group root system
 
 # CIQ backend daemon
 #service iqd /system/bin/iqd
@@ -353,10 +364,12 @@ service htcipcd /system/bin/htcipcd
 #    start hdmid
 
 service mpld /system/bin/mpld
+    class main
     user system
     oneshot
 
 service htcbatt /system/bin/htcbatt
+    class main
     user root
 
 #service dcvs0 /system/bin/dcvs --cpu=0 --slacktime=16
@@ -368,6 +381,7 @@ service htcbatt /system/bin/htcbatt
 #    disabled
 
 service mpdecision /system/bin/mpdecision --Nw 5.4 --Ts 350 --no_sleep --avg_comp --single_core_while_panel_off
+    class main
     user root
     disabled
 
@@ -380,12 +394,14 @@ on property:init.svc.bootanim=stopped
 #    start thermald
 
 service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
+    class main
     user root
     disabled
     oneshot
     ioprio idle 0
 
 service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
+    class main
     user root
     disabled
     oneshot
