@@ -294,7 +294,6 @@ on property:ro.emmc=1
 
 # for modem link
 service modem /system/xbin/wireless_modem
-    class main
     user system
     group system radio
     disabled
