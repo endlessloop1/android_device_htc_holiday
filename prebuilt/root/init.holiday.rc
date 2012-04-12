@@ -347,10 +347,10 @@ service htcipcd /system/bin/htcipcd
 #    start iqfd
 #    start iqd
 
-service hdmid /system/bin/hdmid
-    socket displayd stream 0660 root system graphics
-    disable
-    start hdmid
+# service hdmid /system/bin/hdmid
+#    socket displayd stream 0660 root system graphics
+#    disable
+#    start hdmid
 
 service mpld /system/bin/mpld
     user system
