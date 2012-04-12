@@ -330,7 +330,6 @@ on property:ro.use_data_netmgrd=false
     stop netmgrd
 
 service ril-daemon /system/bin/rild
-    class main
     socket rild stream 660 root radio
     socket rild-debug stream 660 radio system
     user root
