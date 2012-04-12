@@ -277,7 +277,7 @@ on property:service.ser2net.enable=1
 on property:service.ser2net.enable=0
     stop srv_ser2net
 
-service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmcblk0p26 /dev/block/mmcblk0p27 /dev/block/mmcblk0p28 /dev/block/mmcblkp20
+service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmcblk0p26 NULL NULL /dev/block/mmcblk0p27 /dev/block/mmcblk0p28 /dev/block/mmcblkp20
     user root
     disabled
 
