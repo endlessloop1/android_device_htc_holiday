@@ -35,7 +35,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-flags=m=y
 
 PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/root/init:root/init \
     device/htc/holiday/prebuilt/root/init.holiday.rc:root/init.holiday.rc \
     device/htc/holiday/prebuilt/root/init.holiday.usb.rc:root/init.holiday.usb.rc \
     device/htc/holiday/prebuilt/root/ueventd.holiday.rc:root/ueventd.holiday.rc
