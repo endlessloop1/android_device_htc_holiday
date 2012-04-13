@@ -25,6 +25,8 @@ TARGET_USE_SCORPION_PLD_SET := true
 TARGET_SCORPION_BIONIC_PLDOFFS := 6
 TARGET_SCORPION_BIONIC_PLDSIZE := 128
 
+TARGET_EXTRA_CFLAGS += $(call cc-option,-march=armv7-a -mtune=cortex-a8)
+
 TARGET_SPECIFIC_HEADER_PATH := device/htc/holiday/include
 
 # Wifi related defines
