@@ -12,7 +12,9 @@ debug.qctwa.preservebuf = 1
 
 # Android Display
 windowsmgr.max_events_per_sec=275
+video.accelerate.hw=1
 ro.config.disable_hw_accel=false
+debug.performance.tuning=1
 debug.fb.rgb565=0
 debug.sf.hw=1
 
@@ -20,46 +22,31 @@ ro.sf.lcd_density=240
 
 debug.fb.rgb565 = 0
 
+rild.libpath=/system/lib/libhtc_ril.so
+# htc v4 ril
+ro.telephony.ril.v3=signalstrength
+ro.ril.enable.garbage.filter=0
+ro.telephony.default_network = 3
+gsm.sim.operator.alpha =
+gsm.sim.operator.numeric = 310410
+gsm.sim.operator.iso-country = us
+gsm.operator.alpha = AT&T
+gsm.operator.numeric = 310410
+gsm.operator.iso-country = us
+
+# system props for the data modules
+#
+ro.use_data_netmgrd=true
+persist.data_netmgrd_nint=11
+persist.data_netmgrd_mtu=1472
+ro.ril.disable.power.collapse=0
+ro.ril.fast.dormancy.timeout=3
+ro.ril.enable.sbm.feature=1
+pm.sleep_mode=1
+
 # cm qcom build lub
 com.qc.hardware=true
 com.qc.hdmi_out=false
-
-#+HTC_RIL: from QCT Fusion
-rild.libpath=/system/lib/libril-qc-qmi-1.so
-rild.libargs=-d /dev/smd0
-ro.telephony.ril.v3=signalstrength
-
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
-persist.rild.ril.ltedr=0
-persist.rild.ril.ltedrtable=max_retries=infinite,10000
-
-ro.use_data_netmgrd=true
-persist.data_netmgrd_nint=11
-
-# holiday RF team request
-ro.ril.enable.dtm = 0
-ro.ril.gprsclass = 12
-ro.ril.hsdpa.category = 14
-ro.ril.hsupa.category = 6
-ro.ril.hsxpa = 4
-ro.ril.enable.amr.wideband=1
-ro.ril.enable.r8fd=1
-ro.ril.radio.svn=2
-ro.ril.fast.dormancy.rule=1
-ro.ril.disable.mcc.filter=1
-ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
-
-# Default network type.
-# 0 => WCDMA preferred.
-ro.telephony.default_network=0
 
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=30
@@ -69,20 +56,15 @@ wifi.supplicant_scan_interval=30
 ro.opengles.version = 131072
 
 # This is a high density device with more memory, so larger vm heaps for it.
-# Change to 32m, due to 2.3.3 GB already change to 32m
-dalvik.vm.heapsize=64m
+dalvik.vm.heapgrowthlimit=64m
+dalvik.vm.heapsize=128m
+dalvik.vm.heapstartsize=5m
 
 #Modify MTU from 1500 to 1472 on 3G network
-#ro.ril.set.mtu1472 = 1
-
-# Make cdma voicemail the default voicemail number.
-#ro.cdma.voicemail.number = mine
+ro.ril.set.mtu1472 = 1
 
 # For the default value of agps
 ro.ril.def.agps.mode = 2
-
-# For HSDPA low throughput
-ro.ril.disable.power.collapse = 1
 
 # System property for cabl
 ro.qualcomm.cabl=1
@@ -91,8 +73,9 @@ mobiledata.interfaces=rmnet0,eth0,gprs,ppp0
 # For emmc phone storage
 ro.phone_storage = 0
 
-# For adb on bootup
-persist.service.adb.enable=1
-
 # Make rmt_storage start at init
 ro.emmc = 1
+
+persist.sys.usb.config=mtp,adb
+persist.service.adb.enable=1
+persist.sys.root_access=3
