@@ -198,8 +198,8 @@ PRODUCT_COPY_FILES += \
 #    device/htc/holiday/prebuilt/system/bin/snd3254:system/bin/snd3254
 
 # Wifi Module
-PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko 
+#PRODUCT_COPY_FILES += \
+#    device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko 
 
 
 # we have enough storage space to hold precise GC data
