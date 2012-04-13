@@ -98,6 +98,9 @@ BOARD_CAMERA_USE_GETBUFFERINFO := true
 # Legacy touchscreen support
 BOARD_USE_LEGACY_TOUCHSCREEN := true
 
+BOARD_USE_NEW_LIBRIL_HTC := true
+TARGET_PROVIDES_LIBRIL := vendor/htc/holiday/proprietary/libhtc_ril.so
+
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 no_console_suspend=1
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_PAGE_SIZE := 2048
