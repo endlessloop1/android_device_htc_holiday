@@ -24,7 +24,8 @@ debug.fb.rgb565 = 0
 
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
-ro.telephony.ril.v3=signalstrength
+DEVICE_PROVISIONED=1
+ro.telephony.ril.v3=facilitylock,datacall,icccardstatus,singlepdp,qcomuiccstack
 
 # system props for the data modules
 #
@@ -45,7 +46,7 @@ ro.ril.fast.dormancy.rule=1
 ro.ril.disable.mcc.filter=1  	
 ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
 
-ro.telephony.default_network=0
+ro.telephony.default_network=9
 # cm qcom build lub
 com.qc.hardware=true
 com.qc.hdmi_out=false
