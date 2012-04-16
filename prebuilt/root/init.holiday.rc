@@ -287,10 +287,10 @@ service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmc
 on property:ro.emmc=1
     start rmt_storage
 
-#service dmagent /system/bin/dmagent -N
-#    socket dmagent stream 660 root radio
-#    user root
-#    group radio cache inet misc
+service dmagent /system/bin/dmagent -N
+    socket dmagent stream 660 root radio
+    user root
+    group radio cache inet misc
 
 # for modem link
 service modem /system/xbin/wireless_modem
