@@ -100,6 +100,7 @@ on fs
     chown system system /dev/ttyHSUSB0
     chown system system /dev/ttySA0
     chown system system /dev/smd9
+    chown system system /dev/smd0
 
     # for Flip to speaker
     chown radio radio /sys/class/htc_accelerometer/accelerometer/PhoneOnOffFlag
@@ -321,6 +322,12 @@ service qmuxd /system/bin/qmuxd
     class main
     user radio
     group system radio inet
+
+service qmiproxy /system/bin/qmiproxy
+    class main
+    user radio
+    group radio
+    disabled
 
 service netmgrd /system/bin/netmgrd
     class main
