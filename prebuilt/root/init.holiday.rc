@@ -65,7 +65,6 @@ on post-fs
     mkdir /data/qcks 0770 system system
     exec /system/bin/logwrapper /system/bin/htc_ext4_fsck
 
-on fs
     mkdir /data/radio 0770 radio radio
     chown radio system /sys/module/smd_rpcrouter/parameters/debug_mask
     chown radio system /sys/module/rpcrouter_sdio_xprt/parameters/debug_mask
