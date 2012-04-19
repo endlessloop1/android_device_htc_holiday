@@ -25,7 +25,7 @@ debug.fb.rgb565 = 0
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 DEVICE_PROVISIONED=1
-ro.telephony.ril_class=HTCQualcommUiccRIL
+# ro.telephony.ril_class=HTCQualcommUiccRIL
 ro.telephony.ril.v3=facilitylock,datacall,icccardstatus,singlepdp,qcomuiccstack
 
 
