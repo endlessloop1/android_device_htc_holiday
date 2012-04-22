@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/holiday.mk
+    $(LOCAL_DIR)/phone.mk
