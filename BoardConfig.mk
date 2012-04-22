@@ -1,3 +1,6 @@
+# inherit from common msm8660
+-include device/htc/msm8660-common/BoardConfigCommon.mk
+
 # inherit proprietary files
 -include vendor/htc/holiday/BoardConfigVendor.mk
 
