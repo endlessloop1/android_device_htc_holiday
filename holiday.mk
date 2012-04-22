@@ -145,7 +145,7 @@ PRODUCT_COPY_FILES += \
 #
 # media config xml file
 PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/system/etc/media_profiles.xml:system/etc/media_profiles.xml
+    device/htc/msm8660-common/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_PACKAGES += \
     librs_jni \
@@ -168,34 +168,34 @@ PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/firmware/fw_bcm4330_b1.bin:system/vendor/firmware/fw_bcmdhd.bin \
     device/htc/holiday/prebuilt/firmware/fw_bcm4330_apsta_b1.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin
 
-# Audio DSP Profiles
+# HTC BT Audio tune
+PRODUCT_COPY_FILES += device/htc/holiday/configs/AudioBTID.csv:system/etc/AudioBTID.csv
+
+# Sound configs
 PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/system/etc/A1026_CFG.csv:system/etc/A1026_CFG.csv \
-    device/htc/holiday/prebuilt/system/etc/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
-    device/htc/holiday/prebuilt/system/etc/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
-    device/htc/holiday/prebuilt/system/etc/AIC3254_REG_DualMic.txt:system/etc/AIC3254_REG_DualMic.txt \
-    device/htc/holiday/prebuilt/system/etc/AIC3254_REG_DualMic_WA.txt:system/etc/AIC3254_REG_DualMic_WA.txt \
-    device/htc/holiday/prebuilt/system/etc/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
-    device/htc/holiday/prebuilt/system/etc/AudioBTID.csv:system/etc/AudioBTID.csv \
-    device/htc/holiday/prebuilt/system/etc/CodecDSPID.txt:system/etc/CodecDSPID.txt \
-    device/htc/holiday/prebuilt/system/etc/CodecDSPID_WB.txt:system/etc/CodecDSPID_WB.txt \
-    device/htc/holiday/prebuilt/system/etc/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv \
-    device/htc/holiday/prebuilt/system/etc/TPA2051_CFG_XC.csv:system/etc/TPA2051_CFG_XC.csv \
-    device/htc/holiday/prebuilt/system/etc/vpimg:system/etc/vpimg \
-    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Original_Recording.txt:system/etc/soundimage/Sound_Original_Recording.txt \
-    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Original_SPK.txt:system/etc/soundimage/Sound_Original_SPK.txt \
-    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Original.txt:system/etc/soundimage/Sound_Original.txt \
-    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Phone_Original_HP.txt:system/etc/soundimage/Sound_Phone_Original_HP.txt \
-    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Phone_Original_REC.txt:system/etc/soundimage/Sound_Phone_Original_REC.txt \
-    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Phone_Original_SPK.txt:system/etc/soundimage/Sound_Phone_Original_SPK.txt \
-    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Rec_Landscape.txt:system/etc/soundimage/Sound_Rec_Landscape.txt \
-    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Rec_Portrait.txt:system/etc/soundimage/Sound_Rec_Portrait.txt \
-    device/htc/holiday/prebuilt/system/etc/soundimage/Sound_Recording.txt:system/etc/soundimage/Sound_Recording.txt \
-    device/htc/holiday/prebuilt/system/etc/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg \
-    device/htc/holiday/prebuilt/system/etc/soundimage/srsfx_trumedia_51.cfg:system/etc/soundimage/srsfx_trumedia_51.cfg \
-    device/htc/holiday/prebuilt/system/etc/soundimage/srsfx_trumedia_movie.cfg:system/etc/soundimage/srsfx_trumedia_movie.cfg \
-    device/htc/holiday/prebuilt/system/etc/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
-#    device/htc/holiday/prebuilt/system/bin/snd3254:system/bin/snd3254
+    device/htc/holiday/dsp/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
+    device/htc/holiday/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
+    device/htc/holiday/dsp/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
+    device/htc/holiday/dsp/CodecDSPID.txt:system/etc/CodecDSPID.txt \
+    device/htc/holiday/dsp/CodecDSPID_WB.txt:system/etc/CodecDSPID_WB.txt \
+    device/htc/holiday/dsp/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv \
+    device/htc/holiday/dsp/TPA2051_CFG_XC.csv:system/etc/TPA2051_CFG_XC.csv \
+    device/htc/holiday/dsp/soundimage/Sound_MFG.txt:system/etc/soundimage/Sound_MFG.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Original_Recording.txt:system/etc/soundimage/Sound_Original_Recording.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Original_SPK.txt:system/etc/soundimage/Sound_Original_SPK.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Original.txt:system/etc/soundimage/Sound_Original.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_HP_LE.txt:system/etc/soundimage/Sound_Phone_Original_HP_LE.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_HP.txt:system/etc/soundimage/Sound_Phone_Original_HP.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_HP_WB_LE.txt:system/etc/soundimage/Sound_Phone_Original_HP_WB_LE.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_HP_WB.txt:system/etc/soundimage/Sound_Phone_Original_HP_WB.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_REC_NEL.txt:system/etc/soundimage/Sound_Phone_Original_REC_NEL.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_REC.txt:system/etc/soundimage/Sound_Phone_Original_REC.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_REC_WB.txt:system/etc/soundimage/Sound_Phone_Original_REC_WB.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_SPK.txt:system/etc/soundimage/Sound_Phone_Original_SPK.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_SPK_WB.txt:system/etc/soundimage/Sound_Phone_Original_SPK_WB.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Rec_Landscape.txt:system/etc/soundimage/Sound_Rec_Landscape.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Recording.txt:system/etc/soundimage/Sound_Recording.txt \
+    device/htc/holiday/dsp/soundimage/Sound_Rec_Portrait.txt:system/etc/soundimage/Sound_Rec_Portrait.txt
 
 # Wifi Module
 #PRODUCT_COPY_FILES += \
