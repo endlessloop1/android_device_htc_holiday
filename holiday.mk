@@ -78,18 +78,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
 
-#Using prebuilt audio libs since we have audio/mic with them
-#PRODUCT_COPY_FILES += \
-#    device/htc/holiday/prebuilt/system/lib/hw/audio.primary.default.so:system/lib/hw/audio.primary.default.so \
-#    device/htc/holiday/prebuilt/system/lib/hw/audio_policy.default.so:system/lib/hw/audio_policy.default.so \
-#    device/htc/holiday/prebuilt/system/lib/hw/audio.a2dp.default.so:system/lib/hw/audio.a2dp.default.so
-
-
 #Add touchscreen config file
 PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/usr/idc/cy8c-touchscreen.idc:system/usr/idc/cy8c-touchscreen.idc
-#    device/htc/holiday/prebuilt/system/usr/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl 
-#    device/htc/holiday/prebuilt/system/usr/idc/holiday-keypad.idc:system/usr/idc/holiday-keypad.idc
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -107,24 +98,7 @@ PRODUCT_COPY_FILES += \
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/holiday/holiday-vendor.mk)
 
-## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
-	#ro.com.google.clientidbase=android-sprint-us \
-	#ro.com.google.clientidbase.yt=android-sprint-us \
-	#ro.com.google.clientidbase.am=android-sprint-us \
-	#ro.com.google.clientidbase.vs=android-sprint-us \
-	#ro.com.google.clientidbase.gmm=android-sprint-us \
-	#ro.com.google.clientidbase.ms=android-sprint-us \
-	#ro.phone.min_match=7 \
-	#ro.product.model=PG86100 \
-	#ro.cdma.home.operator.alpha=sprint \
-	#gsm.sim.operator.alpha=sprint \
-	#gsm.operator.alpha=sprint \
-	#ro.cdma.home.operator.numeric=310120 \
-	#gsm.sim.operator.numeric=310120 \
-	#gsm.operator.numeric=310120 \
-	#gsm.sim.operator.iso-country=us \
-	#gsm.operator.iso-country=us \
 	ro.com.google.locationfeatures=1 \
 	ro.setupwizard.enable_bypass=1 \
 	ro.media.dec.jpeg.memcap=20000000 \
