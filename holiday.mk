@@ -18,7 +18,10 @@
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-# Inherit msm8660 Vendor Files
+# common msm8660 configs
+$(call inherit-product, device/htc/msm8660-common/msm8660.mk)
+
+# Inherit qcom Vendor Files
 $(call inherit-product-if-exists, vendor/qcom/qcom-vendor-blobs.mk)
 
 # The gps config appropriate for this device
