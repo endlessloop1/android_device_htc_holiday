@@ -60,6 +60,10 @@ on early-fs
     symlink /vendor/firmware/misc_mdm/image/amss.mbn /vendor/firmware/amss.mbn
     symlink /vendor/firmware/misc_mdm/image/htcssmem.mbn /vendor/firmware/htcssmem.mbn
 
+    symlink /system/vendor/firmware/fw_bcmdhd.bin /vendor/firmware/fw_bcmdhd.bin
+    symlink /system/vendor/firmware/fw_bcmdhd_apsta.bin /vendor/firmware/fw_bcmdhd_apsta.bin
+    symlink /system/vendor/firmware/bcm4330.hcd /vendor/firmware/bcm4330.hcd
+
 on post-fs
     wait /dev/ttyHSL1
     mkdir /data/qcks 0770 system system
@@ -193,10 +197,10 @@ service kickstart /system/bin/qcks l
     class main
     oneshot
 
-service wpa_supplicant /system/bin/wpa_supplicant -Dwext -iwlan0 \
-        -c/data/misc/wifi/wpa_supplicant.conf
+service wpa_supplicant /system/bin/wpa_supplicant \
+        -Dnl80211 -iwlan0
     class main
-    socket wpa_wlan0 dgram 0660 wifi wifi
+    socket wpa_wlan0 dgram 660 wifi wifi
     disabled
     oneshot
 
@@ -236,11 +240,13 @@ service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     oneshot
     keycodes 114 115
 
-service hciattach /system/bin/brcm_patchram_plus --enable_hci --patchram /system/vendor/firmware/bcmdhd.hcd /dev/ttyHS0
+service hciattach /system/bin/brcm_patchram_plus /dev/ttyHS0 --enable_hci \
+    --baudrate 3000000 --patchram /vendor/firmware/bcm4330.hcd
     class main
     user bluetooth
     group bluetooth net_bt_admin
     disabled
+    oneshot
 
 # Make sure we startup btld before hcid
 # Set target address to emulator host loopback IF
