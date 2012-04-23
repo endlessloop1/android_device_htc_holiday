@@ -124,21 +124,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
-PRODUCT_PACKAGES += \
-    librs_jni \
-    copybit.msm8660 \
-    gralloc.msm8660 \
-    hwcomposer.msm8660 \
-    libgenlock \
-    libmemalloc \
-    liboverlay \
-    libQcomUI \
-    libOmxCore \
-    libOmxVenc \
-    libOmxVdec \
-    libI420colorconvert \
-    com.android.future.usb.accessory
-
 # Firmware
 PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/firmware/bcm4330.hcd:system/vendor/firmware/bcmdhd.hcd \
@@ -175,8 +160,8 @@ PRODUCT_COPY_FILES += \
     device/htc/holiday/dsp/soundimage/Sound_Rec_Portrait.txt:system/etc/soundimage/Sound_Rec_Portrait.txt
 
 # Wifi Module
-#PRODUCT_COPY_FILES += \
-#    device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko 
+PRODUCT_COPY_FILES += \
+    device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko 
 
 
 # we have enough storage space to hold precise GC data
@@ -187,7 +172,6 @@ PRODUCT_LOCALES += en
 
 PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/etc/vold.fstab:system/etc/vold.fstab
-#    device/htc/holiday/prebuilt/system/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
