@@ -160,9 +160,12 @@ PRODUCT_COPY_FILES += \
     device/htc/holiday/dsp/soundimage/Sound_Recording.txt:system/etc/soundimage/Sound_Recording.txt \
     device/htc/holiday/dsp/soundimage/Sound_Rec_Portrait.txt:system/etc/soundimage/Sound_Rec_Portrait.txt
 
-# Wifi Module
+# Kernel Modules
 PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko 
+    device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko \
+    device/htc/holiday/prebuilt/system/lib/modules/kineto_gan.ko:system/lib/modules/kineto_gan.ko \
+    device/htc/holiday/prebuilt/system/lib/modules/librasdioif.ko:system/lib/modules/librasdioif.ko \
+    device/htc/holiday/prebuilt/system/lib/modules/msm-buspm-dev.ko:system/lib/modules/msm-buspm-dev.ko
 
 
 # we have enough storage space to hold precise GC data
