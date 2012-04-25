@@ -131,35 +131,6 @@ PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/firmware/fw_bcm4330_p2p_b2.bin:system/vendor/firmware/fw_bcmdhd_p2p.bin \
     device/htc/holiday/prebuilt/firmware/fw_bcm4330_apsta_b1.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin
 
-# HTC BT Audio tune
-PRODUCT_COPY_FILES += device/htc/holiday/configs/AudioBTID.csv:system/etc/AudioBTID.csv
-
-# Sound configs
-PRODUCT_COPY_FILES += \
-    device/htc/holiday/dsp/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
-    device/htc/holiday/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
-    device/htc/holiday/dsp/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
-    device/htc/holiday/dsp/CodecDSPID.txt:system/etc/CodecDSPID.txt \
-    device/htc/holiday/dsp/CodecDSPID_WB.txt:system/etc/CodecDSPID_WB.txt \
-    device/htc/holiday/dsp/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv \
-    device/htc/holiday/dsp/TPA2051_CFG_XC.csv:system/etc/TPA2051_CFG_XC.csv \
-    device/htc/holiday/dsp/soundimage/Sound_MFG.txt:system/etc/soundimage/Sound_MFG.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Original_Recording.txt:system/etc/soundimage/Sound_Original_Recording.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Original_SPK.txt:system/etc/soundimage/Sound_Original_SPK.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Original.txt:system/etc/soundimage/Sound_Original.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_HP_LE.txt:system/etc/soundimage/Sound_Phone_Original_HP_LE.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_HP.txt:system/etc/soundimage/Sound_Phone_Original_HP.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_HP_WB_LE.txt:system/etc/soundimage/Sound_Phone_Original_HP_WB_LE.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_HP_WB.txt:system/etc/soundimage/Sound_Phone_Original_HP_WB.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_REC_NEL.txt:system/etc/soundimage/Sound_Phone_Original_REC_NEL.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_REC.txt:system/etc/soundimage/Sound_Phone_Original_REC.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_REC_WB.txt:system/etc/soundimage/Sound_Phone_Original_REC_WB.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_SPK.txt:system/etc/soundimage/Sound_Phone_Original_SPK.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Phone_Original_SPK_WB.txt:system/etc/soundimage/Sound_Phone_Original_SPK_WB.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Rec_Landscape.txt:system/etc/soundimage/Sound_Rec_Landscape.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Recording.txt:system/etc/soundimage/Sound_Recording.txt \
-    device/htc/holiday/dsp/soundimage/Sound_Rec_Portrait.txt:system/etc/soundimage/Sound_Rec_Portrait.txt
-
 # Kernel Modules
 PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko \
@@ -167,10 +138,8 @@ PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/lib/modules/librasdioif.ko:system/lib/modules/librasdioif.ko \
     device/htc/holiday/prebuilt/system/lib/modules/msm-buspm-dev.ko:system/lib/modules/msm-buspm-dev.ko
 
-
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
-
 
 PRODUCT_LOCALES += en
 
