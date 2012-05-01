@@ -126,7 +126,7 @@ PRODUCT_COPY_FILES += \
 
 # Firmware
 PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/firmware/bcm4330.hcd:system/vendor/firmware/bcmdhd.hcd \
+    device/htc/holiday/prebuilt/firmware/bcm4330.hcd:system/vendor/firmware/bcm4330.hcd \
     device/htc/holiday/prebuilt/firmware/fw_bcm4330_b1.bin:system/vendor/firmware/fw_bcmdhd.bin \
     device/htc/holiday/prebuilt/firmware/fw_bcm4330_p2p_b2.bin:system/vendor/firmware/fw_bcmdhd_p2p.bin \
     device/htc/holiday/prebuilt/firmware/fw_bcm4330_apsta_b1.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin
