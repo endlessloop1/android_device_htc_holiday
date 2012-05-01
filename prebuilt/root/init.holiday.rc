@@ -1,4 +1,4 @@
-wlanimport init.holiday.usb.rc
+import init.holiday.usb.rc
 
 on early-fs
 
