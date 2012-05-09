@@ -258,14 +258,17 @@ service btld /system/bin/btld -lpm 1 -hb 3000000
 #	oneshot
 
 service netsharing_on /system/bin/netsharing net on
+        class main
 	disabled
 	oneshot
 
 service netsharing_off /system/bin/netsharing net off
+        class main
 	disabled
 	oneshot
 
 service netsharing_pass /system/bin/netsharing net_pass on
+        class main
 	disabled
 	oneshot
 
