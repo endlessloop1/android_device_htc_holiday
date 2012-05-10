@@ -133,8 +133,7 @@ PRODUCT_COPY_FILES += \
 
 # Kernel Modules
 PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko \
-    device/htc/holiday/prebuilt/system/lib/modules/librasdioif.ko:system/lib/modules/librasdioif.ko
+    device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
