@@ -1,7 +1,12 @@
 import init.holiday.usb.rc
 
-on early-fs
+on early-init
+    export EXTERNAL_STORAGE /mnt/sdcard
+    mkdir /mnt/sdcard 0000 system system
+    # for backwards compatibility
+    symlink /mnt/sdcard /sdcard
 
+on early-fs
     mkdir /system
     mkdir /data 0771 system system
     mkdir /cache 0770 system cache
