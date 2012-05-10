@@ -215,19 +215,19 @@ service dhcpcd_wlan0 /system/bin/dhcpcd -ABKL
     oneshot
 
 service dhcpcd_p2p /system/bin/dhcpcd -aABKL
-    class main
-    disabled
-    oneshot
+	class main
+	disabled
+	oneshot
 
 service iprenew_wlan0 /system/bin/dhcpcd -n
-    class main
-    disabled
-    oneshot
+	class main
+	disabled
+	oneshot
 
 service iprenew_p2p /system/bin/dhcpcd -n
-    class main
-    disabled
-    oneshot
+	class main
+	disabled
+	oneshot
 
 # bugreport is triggered by the KEY_VOL-UP and KEY_VOL-DOWN keycodes
 service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
