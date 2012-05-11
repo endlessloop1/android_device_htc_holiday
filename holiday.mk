@@ -94,6 +94,8 @@ PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/usr/keylayout/BT_HID.kl:system/usr/keylayout/BT_HID.kl \
     device/htc/holiday/prebuilt/system/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl
 
+# Inherit BCM Wifi Firmware
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/holiday/holiday-vendor.mk)
@@ -123,13 +125,6 @@ PRODUCT_COPY_FILES += \
 # media config xml file
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
-
-# Firmware
-PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/firmware/bcm4330.hcd:system/vendor/firmware/bcmdhd.hcd \
-    device/htc/holiday/prebuilt/firmware/fw_bcm4330_b1.bin:system/vendor/firmware/fw_bcmdhd.bin \
-    device/htc/holiday/prebuilt/firmware/fw_bcm4330_p2p_b2.bin:system/vendor/firmware/fw_bcmdhd_p2p.bin \
-    device/htc/holiday/prebuilt/firmware/fw_bcm4330_apsta_b1.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin
 
 # Kernel Modules
 PRODUCT_COPY_FILES += \

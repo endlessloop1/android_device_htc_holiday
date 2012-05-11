@@ -65,11 +65,6 @@ on early-fs
     symlink /vendor/firmware/misc_mdm/image/amss.mbn /vendor/firmware/amss.mbn
     symlink /vendor/firmware/misc_mdm/image/htcssmem.mbn /vendor/firmware/htcssmem.mbn
 
-    symlink /system/vendor/firmware/fw_bcmdhd.bin /vendor/firmware/fw_bcmdhd.bin
-    symlink /system/vendor/firmware/fw_bcmdhd_apsta.bin /vendor/firmware/fw_bcmdhd_apsta.bin
-    symlink /system/vendor/firmware/fw_bcmdhd_p2p.bin /vendor/firmware/fw_bcmdhd_p2p.bin
-    symlink /system/vendor/firmware/bcmdhd.hcd /vendor/firmware/bcmdhd.hcd
-
 on post-fs
     wait /dev/ttyHSL1
     mkdir /data/qcks 0770 system system
@@ -240,7 +235,7 @@ service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     oneshot
     keycodes 114 115
 
-#service hciattach /system/bin/brcm_patchram_plus --enable_hci --patchram /etc/firmware/bcm4329.hcd /dev/ttyHS0
+#service hciattach /system/bin/brcm_patchram_plus --enable_hci --patchram /etc/firmware/bcm4330.hcd /dev/ttyHS0
 #    user bluetooth
 #    group bluetooth net_bt_admin
 #    disabled
