@@ -199,9 +199,9 @@ service kickstart /system/bin/qcks l
     class main
     oneshot
 
-    symlink /system/vendor/firmware/fw_bcmdhd.bin /system/etc/firmware/fw_bcmdhd.bin
-    symlink /system/vendor/firmware/fw_bcmdhd_apsta.bin /system/etc/firmware/fw_bcmdhd_apsta.bin
-    symlink /system/vendor/firmware/fw_bcmdhd_p2p.bin /system/etc/firmware/fw_bcmdhd_p2p.bin
+    symlink /system/vendor/firmware/fw_bcmdhd.bin /system/etc/firmware/fw_bcm4330_b2.bin
+    symlink /system/vendor/firmware/fw_bcmdhd_apsta.bin /system/etc/firmware/fw_bcm4330_apsta_b2.bin
+    symlink /system/vendor/firmware/fw_bcmdhd_p2p.bin /system/etc/firmware/fw_bcm4330_p2p_b2.bin
     symlink /system/vendor/firmware/bcm4330.hcd /system/etc/firmware/bcm4330.hcd
 
 service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -Dnl80211 -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf -puse_p2p_group_interface=1
