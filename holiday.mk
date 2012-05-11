@@ -126,6 +126,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml
 
+#BCM Firmware
+PRODUCT_COPY_FILES += \
+    device/htc/holiday/prebuilt/firmware/bcm4330.hcd:system/vendor/firmware/bcm4330.hcd \
+
 # Kernel Modules
 PRODUCT_COPY_FILES += \
     device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko
