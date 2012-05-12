@@ -132,12 +132,7 @@ PRODUCT_COPY_FILES += \
 
 # Kernel Modules
 PRODUCT_COPY_FILES += \
-    device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko \
-    device/htc/holiday/prebuilt/system/lib/modules/cifs.ko:system/lib/modules/cifs.ko \
-    device/htc/holiday/prebuilt/system/lib/modules/librasdioif.ko:system/lib/modules/librasdioif.ko \
-    device/htc/holiday/prebuilt/system/lib/modules/msm-buspm-dev.ko:system/lib/modules/msm-buspm-dev.ko \
-    device/htc/holiday/prebuilt/system/lib/modules/spidev.ko:system/lib/modules/spidev.ko \
-    device/htc/holiday/prebuilt/system/lib/modules/tun.ko:system/lib/modules/tun.ko
+    device/htc/holiday/prebuilt/system/lib/modules/bcmdhd.ko:system/lib/modules/bcmdhd.ko
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise

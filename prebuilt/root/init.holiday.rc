@@ -17,7 +17,6 @@ on early-fs
     mount ext4 /dev/block/mmcblk0p35 /cache wait noatime nosuid nodev nodelalloc
     mount ext4 /dev/block/mmcblk0p30 /devlog wait noatime nosuid nodev nodelalloc
 
-
     chown radio diag /dev/block/mmcblk0p16
     chmod 0460 /dev/block/mmcblk0p16
 
@@ -179,7 +178,6 @@ on post-fs
     chmod 0660 /dev/diag_arm9
     chmod 0660 /dev/btdiag
 
-
     setprop net.tcp.buffersize.default 4096,87380,110208,4096,16384,110208
     setprop net.tcp.buffersize.wifi    524288,1048576,2097152,262144,524288,1048576
     setprop net.tcp.buffersize.hsdpa   4096,174760,1572864,4096,16384,110208
@@ -205,8 +203,6 @@ service kickstart /system/bin/qcks l
     symlink /system/vendor/firmware/bcm4330.hcd /system/etc/firmware/bcm4330.hcd
 
 service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -Dnl80211 -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf -puse_p2p_group_interface=1
-#   we will start as root and wpa_supplicant will switch to user wifi
-#   after setting up the capabilities required for WEXT
     user root
     group wifi inet
     class main
